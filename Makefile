@@ -39,3 +39,7 @@ clean:
 
 .PHONY: all clean test
 
+myexample : example/myjson.o libjsmn.a
+	$(CC) $(LDFLAGS) $^ -o $@
+
+
